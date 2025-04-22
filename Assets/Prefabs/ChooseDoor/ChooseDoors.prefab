@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9217436841176087084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550591882981517469}
+  m_Layer: 0
+  m_Name: ChooseDoors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1550591882981517469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217436841176087084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.95, y: 1.786, z: -2.699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5768958860144658551}
+  - {fileID: 2454328483020905782}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2705370544409666019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1550591882981517469}
+    m_Modifications:
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627173729980370562, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+      propertyPath: m_Name
+      value: ChooseDoorGood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+--- !u!4 &2454328483020905782 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 541820558438989013, guid: b228788bdf2a67141b21a13d64b30383, type: 3}
+  m_PrefabInstance: {fileID: 2705370544409666019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4019554357662075142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1550591882981517469}
+    m_Modifications:
+    - target: {fileID: 1395209411582766906, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_Name
+      value: ChooseDoorBad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+--- !u!4 &5768958860144658551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7477988453361222001, guid: 9eda3d377021f414a82e3f6dd2835174, type: 3}
+  m_PrefabInstance: {fileID: 4019554357662075142}
+  m_PrefabAsset: {fileID: 0}
