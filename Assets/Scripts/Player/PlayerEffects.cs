@@ -1,21 +1,22 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMoney))]
-public class MoneyChangeEffects : MonoBehaviour
+public class PlayerEffects : MonoBehaviour
 {
     [SerializeField] private AudioClip getMoneySound;
     [SerializeField] private AudioClip loseMoneySound;
+    [SerializeField] private AudioClip transformationSound;
 
     private PlayerMoney playerMoney;
+    private Player player;
 
     private void OnEnable()
     {
+        player = GetComponent<Player>();
         playerMoney = GetComponent<PlayerMoney>();
-        if (playerMoney != null)
-        {
-            playerMoney.MoneyAdded += OnMoneyAdded;
-            playerMoney.MoneyRemoved += OnMoneyRemoved;
-        }
+        player.Transformated += OnTransformated;
+        playerMoney.MoneyAdded += OnMoneyAdded;
+        playerMoney.MoneyRemoved += OnMoneyRemoved;
     }
 
     private void OnMoneyAdded(int amount)
@@ -31,6 +32,14 @@ public class MoneyChangeEffects : MonoBehaviour
         if (loseMoneySound != null)
         {
             AudioEffectsManager.Instance.PlayClip(loseMoneySound, transform.position);
+        }
+    }
+
+    private void OnTransformated()
+    {
+        if (transformationSound != null)
+        {
+            AudioEffectsManager.Instance.PlayClip(transformationSound, transform.position);
         }
     }
 

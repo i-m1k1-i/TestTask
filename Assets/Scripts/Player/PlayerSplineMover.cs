@@ -19,6 +19,9 @@ public class PlayerSplineMover : MonoBehaviour
 
     private float t = 0f;
     private float xOffset = 0f;
+    private float3 tangent;
+
+    public Vector3 Tangent => (Vector3)tangent;
 
     public void Stop()
     {
@@ -38,6 +41,11 @@ public class PlayerSplineMover : MonoBehaviour
 
     private void Update()
     {
+        HandleMove();
+    }
+
+    public void HandleMove()
+    {
         if (stop)
             return;
         if (splineContainer == null)
@@ -47,7 +55,7 @@ public class PlayerSplineMover : MonoBehaviour
         t += (speed / splineLength) * Time.deltaTime;
         t = Mathf.Clamp01(t);
 
-        splineContainer.Spline.Evaluate(t, out var pos, out var tangent, out _);
+        splineContainer.Spline.Evaluate(t, out float3 pos, out tangent, out _);
         Vector3 position = (Vector3)pos;
 
         Vector3 right = Vector3.Cross(Vector3.up, tangent).normalized;
@@ -63,7 +71,6 @@ public class PlayerSplineMover : MonoBehaviour
     {
         var spline = splineContainer.Spline;
 
-        // Находим ближайшую точку на сплайне
         SplineUtility.GetNearestPoint(spline, (float3)position, out float3 nearest, out float t);
 
         return t;

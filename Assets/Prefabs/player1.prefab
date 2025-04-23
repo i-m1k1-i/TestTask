@@ -185,7 +185,7 @@ MonoBehaviour:
   speed: 5
   lateralSpeed: 3
   maxLateralOffset: 2
-  startOffsetForward: 0.01
+  startPositionOnSpline: 0.01
   stop: 0
 --- !u!114 &5341748426230654532
 MonoBehaviour:
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getMoneySound: {fileID: 8300000, guid: e613d02223791e3498094bd49d8a22f5, type: 3}
   loseMoneySound: {fileID: 8300000, guid: 2e33f01a3a502514aa0a1002d414c178, type: 3}
+  transformationSound: {fileID: 8300000, guid: 1df525ed6e0ad0441a64285a4f4c24b6, type: 3}
 --- !u!114 &584547269829907925
 MonoBehaviour:
   m_ObjectHideFlags: 0

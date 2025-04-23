@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
 
     public RichLevel RichLevel => richLevel;
 
+    public event Action Transformated;
+    public event Action Lost;
+
     private void Awake()
     {
         richLevelSkin = GetComponent<RichLevelSkin>();
@@ -53,8 +56,11 @@ public class Player : MonoBehaviour
             Debug.Log("Rich level: " + level);
             if (money.CollectedOnLevel >= (int)level)
             {
+                if (richLevel == (RichLevel)level)
+                    return;
                 richLevel = (RichLevel)level;
                 richLevelSkin.SetSkin(richLevel);
+                Transformated?.Invoke();
                 break;
             }
         }

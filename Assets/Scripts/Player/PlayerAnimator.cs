@@ -6,12 +6,15 @@ public class PlayerAnimator : MonoBehaviour
     const string IdleTrigger = "Idle"; 
     const string WalkTrigger = "Walk";
     const string DanceTrigger = "Dance";
+    const string TransformationTrigger = "Transformation";
 
     private Animator animator;
+    private Player player;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        player = GetComponent<Player>();
     }
 
     private void OnEnable()
@@ -19,6 +22,7 @@ public class PlayerAnimator : MonoBehaviour
         LevelManager.Default.OnLevelLoaded += StandIdle;
         LevelManager.Default.OnLevelStarted += StartWalking;
         LevelEnd.LevelCompleted += StartDancing;
+        player.Transformated += Transformation;
     }
 
     private void StartWalking()
@@ -35,6 +39,11 @@ public class PlayerAnimator : MonoBehaviour
     private void StandIdle()
     {
         animator.SetTrigger(IdleTrigger);
+    }
+
+    private void Transformation()
+    {
+        animator.SetTrigger(TransformationTrigger);
     }
 
     private void OnDisable()
